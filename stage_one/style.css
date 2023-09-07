@@ -35,9 +35,15 @@ body{
 [data-testid="slackDisplayImage"]{
     max-width: 120px;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 3px 7px rgba(3, 1, 0, 0.1);
 }
+
+[data-testid="slackUserName"]{
+    padding: 5px;
+    color: rgb(22, 21, 21);
+}
+
 span{
     display: block;
     padding: 5px;
