@@ -19,4 +19,4 @@ function dateAndTime() {
     document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTime;
 }
 
-setInterval(dateAndTime, 212);
+setInterval(dateAndTime, 1);
