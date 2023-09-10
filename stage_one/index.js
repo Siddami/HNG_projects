@@ -13,7 +13,7 @@ function dateAndTime() {
     let milliseconds = now.getUTCMilliseconds()
     milliseconds < 1000? milliseconds = "0" + milliseconds: milliseconds//condition four milliseconds
 
-    const utcTime = `CurrentUTCTime: ${hours}:${minutes}:${seconds}:${milliseconds} UTC`;
+    const utcTime = `${hours}:${minutes}:${seconds}:${milliseconds} UTC`;
 
     document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = dayString;
     document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTime;
