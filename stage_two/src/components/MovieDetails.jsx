@@ -61,8 +61,8 @@ const MovieDetails = () => {
                        ))}
                     </p>
                   </div>
-                    <p className="flex justify-center items-center">
-                      <img src="/vectors/star.svg" className="w-7 h-7"/>
+                    <p className="flex justify-center items-center gap-3">
+                      <img src="/vectors/star.svg" className="w-5 h-6"/>
                       <span className=" text-gray-500">{(movie.vote_average/10) * (100).toFixed()}%</span>|
                       <span>{movie.vote_count}</span>
                     </p>

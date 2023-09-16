@@ -2,7 +2,6 @@ import { Link} from "react-router-dom";
 
 
 const Card = ({movies})=>{
-
     return(
         <>
           <div className="flex justify-between px-6 pt-6">
