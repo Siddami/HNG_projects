@@ -1,16 +1,16 @@
 import Home from "./components/Home";
 import MovieDetails from "./components/MovieDetails";
-
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
 
 
   return(
-    <div>
-      <Home />
-      {/* <MovieDetails /> */}
-    </div>
+    <Routes>
+        <Route path='/' element= { <Home />}/>
+        <Route path='/movie-details/:movieId' element={<MovieDetails />}/>
+    </Routes>
   )
 
 }
