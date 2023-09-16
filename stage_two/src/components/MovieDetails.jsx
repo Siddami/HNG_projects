@@ -53,7 +53,7 @@ const MovieDetails = () => {
               <section className="flex flex-col justify-center items-center gap-4">
                 <article className="flex flex-wrap justify-between items-center p-4">
                   <div className="flex flex-wrap justify-center items-center gap-4">
-                    <p className="gap-2"><span data-testid="movie-title">{movie.title}</span> •<span data-testid="movie-release-date">{movie.release_date}</span> •<span>{movie.adult == false? 'PG-13': 'RATED 18'}</span> •<span data-testid="runtime">{movie.runtime}</span>
+                    <p className="flex gap-2"><span data-testid="movie-title">{movie.title}</span><span data-testid="movie-release-date">•{movie.release_date}</span><span>•{movie.adult == false? 'PG-13': 'RATED 18'}</span><span data-testid="runtime">•{movie.runtime}</span>
                     </p>
                     <p className="text-rose-600 text-sm flex gap-2">
                        {movie.genres.map((genre) => (
