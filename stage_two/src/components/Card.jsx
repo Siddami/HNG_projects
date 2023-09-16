@@ -32,12 +32,12 @@ const Card = ({movies})=>{
                     <span className="p-1">USA</span>
                     <span data-testid = "movie-release-date">{movieDate}</span></small>
                   <h3 className="text-center text-sm font-bold" data-testid = "movie-title">{movie.title}</h3>
-                  <div className="flex justify-between gap-15">
-                    <span className="text-gray-600 flex items-start gap-1">
+                 <div className="flex justify-between item-start">
+                    <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/imdb.svg" className="w-5 h-5" />
                       <small>{movie.vote_count}/100</small>
                     </span>
-                    <span className="text-gray-600 flex items-start gap-1">
+                    <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/tomato.svg" className="w-4 h-4" />
                       <small>{(movie.vote_average/10) * (100)}%</small>
                     </span>

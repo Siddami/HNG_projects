@@ -26,8 +26,8 @@ const MovieDetails = () => {
     <>
     {
       Object.keys(movie).length ?
-    <div className="grid lg:grid-cols-4 gap-2 ">
-        <nav className="flex flex-col  items-center lg:col-span-1 w-full h-full gap-y-5 border-r-2 p-4 rounded-3xl">
+    <div className="grid lg:grid-cols-4 gap-y-2 justify-center relative">
+        <nav className="flex flex-col justify-center  items-center lg:col-span-1 w-full h-full gap-y-5 border-r-2 p-4 rounded-3xl">
             <div>
               <img src="/vectors/Logo.svg" className="w-38 h-12 m-6" />
             </div>
@@ -39,7 +39,7 @@ const MovieDetails = () => {
                 <span className="flex h-16 items-center w-24"><img src="/vectors/TVShow.svg" className="block w-6 h-6"/><p className="p-2">TV Series</p></span>
                 <span className="flex h-16 items-center w-24"><img src="/vectors/Calendar.svg" className="block w-6 h-6"/><p className="p-2">Upcoming</p></span>
             </div>
-            <div className=" w-8/12 border-2 p-3 rounded-xl flex flex-col justify-center items-center h-48">
+            <div className="w-8/12 border-2 p-3 rounded-xl flex flex-col justify-center items-center h-48">
               <p className="text-sm p-2">Play movie quizes and earn free tickets</p>
               <small className="text-gray-500 p-2">50k people are playing now</small>
               <button className="bg-rose-200 text-pink-700 text-xs rounded-xl p-2">start playing</button>
@@ -51,9 +51,9 @@ const MovieDetails = () => {
                     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="object-cover w-full max-h-[449px]" />
                 </div>
               <section className="flex flex-col justify-center items-center gap-4">
-                <article className="flex flex-wrap justify-between items-center p-4">
-                  <div className="flex flex-wrap justify-center items-center gap-4">
-                    <p className="flex gap-2"><span data-testid="movie-title">{movie.title}</span><span data-testid="movie-release-date">•{movie.release_date}</span><span>•{movie.adult == false? 'PG-13': 'RATED 18'}</span><span data-testid="runtime">•{movie.runtime}</span>
+                <article className="flex flex-wrap justify-between items-center p-4 gap-x-4">
+                  <div className="flex flex-wrap justify-center items-center gap-x-4">
+                    <p className="flex justify-center items-center gap-2"><span data-testid="movie-title">{movie.title}</span><span data-testid="movie-release-date">{movie.release_date}</span><span>{movie.adult == false? 'PG-13': 'RATED 18'}</span><span data-testid="runtime">{movie.runtime}</span>
                     </p>
                     <p className="text-rose-600 text-sm flex gap-2">
                        {movie.genres.map((genre) => (
@@ -63,7 +63,7 @@ const MovieDetails = () => {
                   </div>
                     <p className="flex justify-center items-center">
                       <img src="/vectors/star.svg" className="w-7 h-7"/>
-                      <span className=" text-gray-500">{(movie.vote_average/10) * (100)}%</span>|
+                      <span className=" text-gray-500">{(movie.vote_average/10) * (100).toFixed()}%</span>|
                       <span>{movie.vote_count}</span>
                     </p>
                 </article>
@@ -80,7 +80,7 @@ const MovieDetails = () => {
                           <button><img src="/vectors/downarrow.svg" alt="downward arrow" className=" w-7 h-7" /></button></p>
                       </div>
                   </article>
-                  <article className="lg:col-span-1 flex flex-col gap-3 justify-center">
+                  <article className="lg:col-span-1 flex flex-col gap-y-3 justify-center">
                       <button className="bg-rose-700 text-white flex p-2 gap-2 items-center justify-center"><img src="/vectors/tickets.svg" /> See Showtimes</button>
                       <button className="bg-rose-200 flex p-2 gap-2 items-center justify-center" ><img src="/vectors/list.svg" /> More watch options</button>
                       <img src="/vectors/subs.svg" alt="other movies" />

@@ -4,7 +4,6 @@ import menu from '../images/Menu alt 4.png'
 import tomatoe from '../images/tomatoe.png'
 import play from '../images/Play.png'
 
-
 export default function Hero() {
     const heroStyle = {
       backgroundImage: `url(${poster})`,
@@ -15,7 +14,7 @@ export default function Hero() {
     };
 
     return (
-      <header style={heroStyle} className='p-5 md:px-20 w-full'>
+      <header style={heroStyle} className='p-2 md:px-20 w-full'>
           <nav className="lg:p-6 flex justify-between items-center h-20 gap-2" >
               <div className='flex justify-center items-center'>
                   <img src={logo} className='w-8 h-8 lg:w-12 lg:h-12'/>
