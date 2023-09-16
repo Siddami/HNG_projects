@@ -13,7 +13,6 @@ const MovieDetails = () => {
           `https://api.themoviedb.org/3/movie/${movieId}?api_key=e9daea829c0d4fd5b5b075e851fe82a6`
         );
         const data = await res.json();
-        console.log({fetchedMovieData:data});
         setMovie(data);
 
       } catch (e) {
@@ -53,7 +52,7 @@ const MovieDetails = () => {
                 </div>
               <section className="flex flex-col justify-center items-center gap-4">
                 <article className="flex flex-wrap justify-between items-center p-4">
-                  <div className="flex flex-wrap justify-center items-center gap-2">
+                  <div className="flex flex-wrap justify-center items-center gap-4">
                     <p className="gap-2"><span data-testid="movie-title">{movie.title}</span> •<span data-testid="movie-release-date">{movie.release_date}</span> •<span>{movie.adult == false? 'PG-13': 'RATED 18'}</span> •<span data-testid="runtime">{movie.runtime}</span>
                     </p>
                     <p className="text-rose-600 text-sm flex gap-2">
@@ -64,7 +63,7 @@ const MovieDetails = () => {
                   </div>
                     <p className="flex justify-center items-center">
                       <img src="/vectors/star.svg" className="w-7 h-7"/>
-                      <span className=" text-gray-500">rating</span>|
+                      <span className=" text-gray-500">{(movie.vote_average/10) * (100)}%</span>|
                       <span>{movie.vote_count}</span>
                     </p>
                 </article>
