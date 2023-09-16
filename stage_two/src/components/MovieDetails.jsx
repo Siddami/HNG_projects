@@ -26,7 +26,7 @@ const MovieDetails = () => {
                 <iframe src="" className="w-full h-72 p-5 rounded-lg bg-slate-500 sm:w-2/4 sm:h-52"></iframe>
                 <article className="flex flex-wrap justify-between items-center p-4">
                   <div className="flex flex-wrap justify-center items-center gap-2">
-                    <p className="gap-2"><span>Top Gun: Maverick </span> •<span> 2022</span> •<span> PG-13</span> •<span> 2h 10m</span>
+                    <p className="gap-2"><span data-testid="movie-title">Top Gun: Maverick </span> •<span data-testid="movie-release-date"> 2022</span> •<span> PG-13</span> •<span data-testid="runtime"> 2h 10m</span>
                     </p>
                     <p className="text-rose-600 text-sm flex gap-2">
                       <span>Action</span>
@@ -42,7 +42,7 @@ const MovieDetails = () => {
               </section>
               <section className="grid lg:grid-cols-3 p-4 gap-2">
                   <article className="lg:col-span-2 flex flex-col justify-center gap-5">
-                      <p>
+                      <p data-testid="movie-overview">
                       After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.
                       </p>
                       <p>Director: <span className="text-rose-700">names</span></p>

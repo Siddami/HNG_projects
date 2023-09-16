@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
+import MovieDetails from "./MovieDetails";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -41,13 +43,16 @@ const Home = () => {
           const movieDate = movie.release_date.slice(0,4)
           ;
           return (
-            <div key={movie.id} className="flex flex-col justify-start items-center" data-testid = "movie-card" >
+            // movie card
+
+            <div key={movie.id} className="flex flex-col justify-start items-center" data-testid = "movie-card">
               <img
                 src={imageURL}
                 alt={movie.title}
                 className="rounded shadow-lg w-48 h-64 object-cover"
                 data-testid = "movie-poster"
               />
+
               <small className="text-gray-600 pt-2">
                 <span className="p-1">USA</span>
                 <span data-testid = "movie-release-date">{movieDate}</span></small>
@@ -66,7 +71,12 @@ const Home = () => {
           );
         })}
       </div>
+
       <Footer />
+      {/* <Routes>
+        <Route exact path="/" component={Home} />
+        <Route path="/MovieDetails" component={MovieDetails} />
+      </Routes> */}
     </>
   );
 };
