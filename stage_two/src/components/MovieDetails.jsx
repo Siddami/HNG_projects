@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
   const {movieId} = useParams()
@@ -32,7 +33,9 @@ const MovieDetails = () => {
               <img src="/vectors/Logo.svg" className="w-38 h-12 m-6" />
             </div>
             <div className="flex flex-col text-slate-600 items-center">
-                <span className="flex h-16 items-center w-24"><img src="/vectors/Home.svg" className="block w-6 h-6"/><p className="p-2">Home</p></span>
+                <Link to ='/'>
+                  <span className="flex h-16 items-center w-24"><img src="/vectors/Home.svg" className="block w-6 h-6"/><p className="p-2">Home</p></span>
+                </Link>
                 <span className="flex h-16 items-center w-24"><img src="/vectors/movie.svg" className="block w-6 h-6"/><p className="p-2">Movie</p></span>
                 <span className="flex h-16 items-center w-24"><img src="/vectors/TVShow.svg" className="block w-6 h-6"/><p className="p-2">TV Series</p></span>
                 <span className="flex h-16 items-center w-24"><img src="/vectors/Calendar.svg" className="block w-6 h-6"/><p className="p-2">Upcoming</p></span>
@@ -71,9 +74,6 @@ const MovieDetails = () => {
                       <p data-testid="movie-overview">
                         {movie.overview}
                       </p>
-                      <p>Director: <span className="text-rose-700">names</span></p>
-                      <p>Writers: <span className="text-rose-700">names</span></p>
-                      <p>Stars: <span className="text-rose-700">names</span></p>
                       <div className="flex justify-start items-center w-full">
                         <p className="text-white bg-rose-700 p-2">Popularity #{movie.popularity}</p>
                         <p className="border border-l-0 border-gray-500 p-1 flex items-center  gap-24">

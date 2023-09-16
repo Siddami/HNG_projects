@@ -35,11 +35,11 @@ const Card = ({movies})=>{
                   <div className="flex justify-between gap-20">
                     <span className="text-gray-600 flex items-start gap-1">
                       <img src="./vectors/imdb.svg" className="w-5 h-5" />
-                      <small>rate</small>
+                      <small>{movie.vote_count}/100</small>
                     </span>
                     <span className="text-gray-600 flex items-start gap-1">
                       <img src="./vectors/tomato.svg" className="w-4 h-4" />
-                      <small>rate</small>
+                      <small>{(6.5/10) * (100)}</small>
                     </span>
                   </div>
                 </div>
