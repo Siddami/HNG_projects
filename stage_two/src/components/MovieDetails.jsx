@@ -17,7 +17,7 @@ const MovieDetails = () => {
         setMovie(data);
 
       } catch (e) {
-        console.error(e);
+        console.error('Error occured while fetching movie details',e);
       }
     };
       getData();

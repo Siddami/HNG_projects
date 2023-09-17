@@ -23,7 +23,7 @@ import Loader from "./Loader";
           setHeroBackdrop(data.results[0].backdrop_path);
         }
       } catch (e) {
-        console.error(e);
+        console.error('Error occurred while fetching movie details',e);
       }
     };
 
