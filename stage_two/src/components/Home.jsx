@@ -13,7 +13,7 @@ import Loader from "./Loader";
     const getData = async () => {
       try {
         const res = await fetch(
-          "https://api.themoviedb.org/3/movie/popular?api_key=e9daea829c0d4fd5b5b075e851fe82a6"
+          "https://api.themoviedb.org/3/movie/top_rated?api_key=e9daea829c0d4fd5b5b075e851fe82a6"
         );
         const data = await res.json();
         console.log(data);
