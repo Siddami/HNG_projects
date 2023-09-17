@@ -5,6 +5,7 @@ import tomatoe from '../images/tomatoe.png'
 import play from '../images/Play.png'
 
 export default function Hero() {
+
     const heroStyle = {
       backgroundImage: `url(${poster})`,
       backgroundSize: 'cover',
@@ -21,10 +22,10 @@ export default function Hero() {
                   <h2 className='lg:text-xl text-sm font-bold text-white lg:px-4'>MovieBox</h2>
               </div>
               <div className=''>
-                <form action="search" className='flex justify-between md:w-96 md:px-4 w-52 items-center relative rounded ring-2 ring-white'>
-                  <input type="search" className='text-xs md:text-lg bg-transparent block rounded' placeholder='What do you want to watch?'/>
-                  <button type='submit'><i className='text-white block p-2 fa fa-search text-xs md:text-lg'></i></button>
-                </form>
+                    <form action="search" className='flex justify-between md:w-96 md:px-4 w-52 items-center relative rounded ring-2 ring-white'>
+                        <input type="search" className=' ring-transparent text-xs md:text-lg bg-transparent block rounded' placeholder='What do you want to watch?'/>
+                        <button type='submit'><i className='text-white block p-2 fa fa-search text-xs md:text-lg'></i></button>
+                    </form>
               </div>
               <div className='flex justify-between items-center'>
                 <h2 className='text-white p-3 hidden md:inline-flex md:text-xl'>Sign in</h2>

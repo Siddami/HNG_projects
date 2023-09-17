@@ -20,9 +20,8 @@ const MovieDetails = () => {
         console.error(e);
       }
     };
-
-    getData();
-  }, []);
+      getData();
+ }, []);
   return (
     <>
     {
@@ -54,8 +53,8 @@ const MovieDetails = () => {
             <img src="/vectors/logout.svg" className="h-10 w-24 m-2" />
           </nav>
           <main className="lg:col-span-3 p-4 flex flex-col">
-                <div className="w-full flex-grow  rounded-lg flex overflow-hidden">
-                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="object-cover w-full max-h-[449px]" data-testid="movie-poster"/>
+                <div className="w-full flex-shrink-0 justify-center bg-transparent rounded-lg flex overflow-hidden">
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} data-testid="movie-poster" className="flex object-contain w-[100%] max-h-[400px] items-center" />
                 </div>
                 <section className="flex flex-col justify-center items-center gap-4">
                     <article className="flex flex-wrap justify-between items-center p-4 gap-x-4">
