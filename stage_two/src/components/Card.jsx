@@ -34,7 +34,7 @@ const Card = ({movies})=>{
                  <div className="flex justify-between item-start">
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/imdb.svg" className="w-5 h-5" />
-                      <small>{movie.vote_count}/100</small>
+                      <small>{Math.floor(movie.popularity)}/100</small>
                     </span>
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/tomato.svg" className="w-4 h-4" />
