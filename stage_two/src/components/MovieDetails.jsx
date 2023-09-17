@@ -25,7 +25,8 @@ const MovieDetails = () => {
   return (
     <>
     {
-      Object.keys(movie).length ?
+
+    Object.keys(movie).length ?
     <div className="grid lg:grid-cols-4 gap-y-2 justify-center relative">
         <nav className="flex flex-col justify-center  items-center lg:col-span-1 w-full h-full gap-y-5 border-r-2 p-4 rounded-3xl">
             <div>
@@ -53,7 +54,9 @@ const MovieDetails = () => {
               <section className="flex flex-col justify-center items-center gap-4">
                 <article className="flex flex-wrap justify-between items-center p-4 gap-x-4">
                   <div className="flex flex-wrap justify-center items-center gap-x-4">
-                    <p className="flex justify-center items-center gap-2"><span data-testid="movie-title">{movie.title}</span><span data-testid="movie-release-date">{movie.release_date}</span><span>{movie.adult == false? 'PG-13': 'RATED 18'}</span><span data-testid="runtime">{movie.runtime}</span>
+                    <p className="flex justify-center items-center gap-2"><span data-testid="movie-title">{movie.title}</span><span data-testid="movie-release-date">{movie.release_date.slice(0,4)}</span><span>{movie.adult == false? 'PG-13': 'RATED 18'}</span><span data-testid="runtime">{
+                      (`${Math.floor(movie.runtime / 60)}h ${movie.runtime%6}m`)
+                      }</span>
                     </p>
                     <p className="text-rose-600 text-sm flex gap-2">
                        {movie.genres.map((genre) => (
@@ -63,7 +66,7 @@ const MovieDetails = () => {
                   </div>
                     <p className="flex justify-center items-center gap-3">
                       <img src="/vectors/star.svg" className="w-5 h-6"/>
-                      <span className=" text-gray-500">{(movie.vote_average/10) * (100).toFixed()}%</span>|
+                      <span className=" text-gray-500">{((movie.vote_average/10) * (100).toFixed())}%</span>|
                       <span>{movie.vote_count}</span>
                     </p>
                 </article>
