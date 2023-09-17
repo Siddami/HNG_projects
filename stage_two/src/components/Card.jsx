@@ -38,7 +38,7 @@ const Card = ({movies})=>{
                     </span>
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/tomato.svg" className="w-4 h-4" />
-                      <small>{(movie.vote_average/10) * (100)}%</small>
+                      <small>{((movie.vote_average/10) * (100)).toFixed()}%</small>
                     </span>
                   </div>
                 </div>
