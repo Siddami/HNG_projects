@@ -17,7 +17,7 @@ const Card = ({movies})=>{
               ;
               return (
                 // movie card
-                <Link to={`/movie-details/${movie.id}`} key={movie.id} >
+                <Link to={`/movies/${movie.id}`} key={movie.id} >
                 <div data-testid="movie-card" key={movie.id} className="flex flex-col justify-start items-center">
                   <img
                     src={imageURL}
