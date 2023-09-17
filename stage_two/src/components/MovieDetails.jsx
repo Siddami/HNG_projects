@@ -54,7 +54,7 @@ const MovieDetails = () => {
           </nav>
           <main className="lg:col-span-3 p-4 flex flex-col">
                 <div className="w-full flex-shrink-0 justify-center bg-transparent rounded-lg flex overflow-hidden">
-                    <img  data-testid="movie-poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="flex object-contain w-[100%] max-h-[400px] items-center" />
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} className="flex object-contain w-full max-h-[400px] items-center" />
                 </div>
                 <section className="flex flex-col justify-center items-center gap-4">
                     <article className="flex flex-wrap justify-between items-center p-4 gap-x-4">
