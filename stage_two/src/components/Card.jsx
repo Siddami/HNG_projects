@@ -27,7 +27,9 @@ const Card = ({movies})=>{
                   />
 
                   <small className="text-gray-600 pt-2">
-                  <span data-testid="movie-release-date">{new Date(movie.release_date).toLocaleDateString()}</span></small>
+                  <span data-testid="movie-release-date">{
+                      movie.release_date}
+                  </span></small>
                   <h3 className="text-center text-sm font-bold" data-testid="movie-title">{movie.title}</h3>
                  <div className="flex justify-between item-start">
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">

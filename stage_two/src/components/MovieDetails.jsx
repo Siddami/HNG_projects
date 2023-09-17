@@ -61,10 +61,10 @@ const MovieDetails = () => {
                           <div className="flex flex-wrap justify-center items-center gap-x-4">
                           <p className="flex justify-center items-center gap-2">
                                 <span data-testid="movie-title" className="font-bold text-lg">{movie.title}</span>
-                                <span data-testid="movie-release-date">{new Date(movie.release_date).toLocaleDateString()}</span>
+                                <span data-testid="movie-release-date">{movie.release_date}</span>
                                 <span>{movie.adult == false? 'PG-13': 'RATED 18'}</span>
                                 <span data-testid="movie-runtime">{
-                                (`${Math.floor(movie.runtime / 60)}h ${movie.runtime%6}m`)
+                                 movie.runtime
                                 }</span>
                           </p>
                         <p className="text-rose-600 text-sm flex gap-2">
