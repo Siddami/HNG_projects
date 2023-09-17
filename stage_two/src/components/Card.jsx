@@ -18,17 +18,17 @@ const Card = ({movies})=>{
               return (
                 // movie card
                 <Link to={`/movie-details/${movie.id}`} key={movie.id} >
-                <div data-testid = "movie-card" key={movie.id} className="flex flex-col justify-start items-center">
+                <div data-testid="movie-card" key={movie.id} className="flex flex-col justify-start items-center">
                   <img
                     src={imageURL}
                     alt={movie.title}
                     className="rounded shadow-lg w-48 h-64 object-cover"
-                    data-testid = "movie-poster"
+                    data-testid="movie-poster"
                   />
 
                   <small className="text-gray-600 pt-2">
-                  <span data-testid = "movie-release-date">{new Date(movie.release_date).toLocaleDateString()}</span></small>
-                  <h3 className="text-center text-sm font-bold" data-testid = "movie-title">{movie.title}</h3>
+                  <span data-testid="movie-release-date">{new Date(movie.release_date).toLocaleDateString()}</span></small>
+                  <h3 className="text-center text-sm font-bold" data-testid="movie-title">{movie.title}</h3>
                  <div className="flex justify-between item-start">
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/imdb.svg" className="w-5 h-5" />
