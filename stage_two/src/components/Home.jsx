@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Card from "./Card"
-// import MovieDetails from "./MovieDetails";
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Loader from "./Loader";
 
-const Home = () => {
+
+  const Home = () => {
   const [movies, setMovies] = useState([]);
   const [heroBackdrop, setHeroBackdrop] = useState("");
 
@@ -31,9 +31,16 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Hero backdropPath={heroBackdrop} />
-      <Card movies={movies}/>
-      <Footer />
+      {
+        Object.keys(movies).length?
+        <>
+          <Hero backdropPath={heroBackdrop} />
+          <Card movies={movies}/>
+          <Footer />
+        </>
+        :
+        <Loader />
+      }
     </>
       );
 };

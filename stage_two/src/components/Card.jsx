@@ -14,7 +14,6 @@ const Card = ({movies})=>{
             {movies.slice(0, 10).map((movie) => {
               const imageURL = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
               console.log({movie});
-              const movieDate = movie.release_date.slice(0,4)
               ;
               return (
                 // movie card
@@ -28,8 +27,7 @@ const Card = ({movies})=>{
                   />
 
                   <small className="text-gray-600 pt-2">
-                    <span className="p-1">USA</span>
-                    <span data-testid = "movie-release-date">{movieDate}</span></small>
+                  <span data-testid = "movie-release-date">{movie.release_date}</span></small>
                   <h3 className="text-center text-sm font-bold" data-testid = "movie-title">{movie.title}</h3>
                  <div className="flex justify-between item-start">
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
@@ -38,7 +36,7 @@ const Card = ({movies})=>{
                     </span>
                     <span className="text-gray-600 flex justify-start items-start gap-1 px-5">
                       <img src="./vectors/tomato.svg" className="w-4 h-4" />
-                      <small>{((movie.vote_average/10) * (100)).toFixed()}%</small>
+                      <small>{(parseFloat(movie.vote_average)/10 * (100)).toFixed()}%</small>
                     </span>
                   </div>
                 </div>
