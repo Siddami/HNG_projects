@@ -64,7 +64,7 @@ const MovieDetails = () => {
                                 <span data-testid="movie-title" className="font-bold text-lg">{movie.title}</span>
                                 <span data-testid="movie-release-date">{movie.release_date}</span>
                                 <span>{movie.adult == false? 'PG-13': 'RATED 18'}</span>
-                                <span data-testid="runtime">{
+                                <span data-testid="movie-runtime">{
                                 (`${Math.floor(movie.runtime / 60)}h ${movie.runtime%6}m`)
                                 }</span>
                         </p>
